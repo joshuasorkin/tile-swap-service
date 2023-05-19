@@ -47,12 +47,23 @@
                 video.play();
 
                 video.addEventListener('loadedmetadata', () => {                    
+                    console.log("video width: ",video.videoWidth," video height: ",video.videoHeight);
+
                     //todo: refactor dimension calculations into their own function
                     pieceWidth = Math.floor(video.videoWidth / difficulty);
                     pieceHeight = Math.floor(video.videoHeight / difficulty);
+
+                    console.log({pieceWidth},{pieceHeight});
+
                     puzzleWidth = pieceWidth * difficulty;
                     puzzleHeight = pieceHeight * difficulty;
+
+                    console.log({puzzleWidth},{puzzleHeight});
                     setCanvas();
+                    console.log("canvas width,height: ",canvas.width,canvas.height);
+                    const clientRect = canvas.getBoundingClientRect();
+                    console.log("rendered width, height: ",clientRect.width,clientRect.height);
+
                     initPuzzle();
 
                     function setCanvas(){
