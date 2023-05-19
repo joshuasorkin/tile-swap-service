@@ -214,6 +214,7 @@
                         setMouse(e);
                         currentPiece = checkPieceClicked();
                         if (currentPiece !== null) {
+                            console.log(`id: ${currentPiece.id}`);
                             stage.clearRect(
                                 currentPiece.xPos,
                                 currentPiece.yPos,
