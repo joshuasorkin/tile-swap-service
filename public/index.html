@@ -258,6 +258,9 @@
                             }
                             //once we find a piece where the coordinates are in bounds, return that piece as clicked
                             else {
+                                console.log({mouse});
+                                console.log("x range: ",piece.xPos,piece.xPos+pieceWidth);
+                                console.log("y range: ",piece.yPos,piece.yPos+pieceHeight);
                                 return piece;
                             }
                         }
